@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        .wrapper {
+            width: 1380px;
+            margin: 0 auto;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+        
+        .container1 {
+            width: 100%;
+            background-color: rgb(0, 74, 173);
+        }
+        
+        .container2 {
+            width: 100%;
+            background-color: white;
+        }
+        
+        ul li {
+            width: 150px;
+        }
+        
+        .navbar {
+            background-color: rgb(0, 74, 173);
+            position: absolute;
+            top: 0px;
+            width: 100%;
+        }
+        
+        .navbar-brand img {
+            height: 100px;
+            WIDTH: 100px;
+            position: relative;
+            left: -120px;
+            top: 0px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            position: relative;
+            left: 40px;
+            top: 0px;
+        }
+        
+        .nav-link:hover {
+            color: #ddd !important;
+        }
+        
+        .search-bar {
+            width: 300px;
+            position: relative;
+            left: 110px;
+            top: 0px;
+        }
+        
+        .search-button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            position: relative;
+            left: 70px;
+            top: 0px;
+        }
+        
+        .navbar-nav {
+            position: absolute;
+            left: 100px;
+        }
+        
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        .wrapper {
+            width: 1380px;
+            height: 4540px;
+            margin: 0 auto;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+        
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(30, 50, 204);
+        }
+        
+        header img {
+            position: absolute;
+            top: -20px;
+            left: 0px;
+        }
+        
+        .frm1 {
+            width: 400px;
+            display: flex;
+            position: relative;
+            right: -190px;
+            top: 15px;
+        }
+        
+        .frm1-input {
+            width: 20%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+        
+        .frm1-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            position: relative;
+            right: -189px;
+            top: 15px;
+        }
+        
+        .frm1-button:hover:hover {
+            background-color: darkred;
+        }
+        
+        .cart-icon {
+            font-size: 24px;
+            color: rgb(0, 74, 173);
+            position: relative;
+            left: 350px;
+            top: -60px;
+            cursor: pointer;
+        }
+        
+        .cart-icon .cart-count {
+            position: fixed;
+            top: 10px;
+            right: -80px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 4px 8px;
+        }
+        
+        .cart-icon img {
+            cursor: pointer;
+            background-color: rgb(0, 74, 173);
+            position: absolute;
+            top: 20px;
+            right: 200px;
+        }
+        
+        .cart-icon img:hover {
+            opacity: 0.8;
+        }
+        
+        .content {
+            width: 100%;
+            height: 960px;
+            white-space: normal;
+        }
+        
+        .content h1 {
+            position: absolute;
+            left: 600px;
+            top: 600px;
+        }
+        
+        .content h2 {
+            position: absolute;
+            left: 600px;
+            top: 800px;
+        }
+        
+        .content p {
+            position: relative;
+            left: 600px;
+            top: 70px;
+            line-height: 1.5;
+            padding: 10px;
+        }
+        
+        .content span {
+            position: relative;
+            left: 20px;
+            top: 100px;
+            line-height: 15px;
+            padding: 10px;
+            line-height: 1.5;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .content img {
+            position: relative;
+            left: 30px;
+            top: -120px;
+            line-height: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding: 20px;
+            text-align: left;
+            float: left;
+            margin-right: 20px;
+        }
+        
+        .button {
+            background-color: rgb(30, 50, 204);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            POSITION: absolute;
+            top: 950px;
+            left: 850px;
+        }
+        
+        .button:hover {
+            background-color: #31b0d5;
+        }
+        
+        .footer {
+            background-color: rgb(0, 74, 173);
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .footer img {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: -50px;
+        }
+        
+        .footer a {
+            color: white;
+            position: relative;
+            left: -15px;
+            top: 50px;
+            line-height: 1;
+            padding: 10px;
+        }
+        
+        .footer a:hover {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer p {
+            color: white;
+            position: relative;
+            left: -70px;
+        }
+        
+        .footer h5 {
+            color: white;
+            position: relative;
+            left: 100px;
+            top: 50px;
+        }
+        
+        .footer i {
+            color: white;
+            position: relative;
+            left: -70px;
+            top: 70px;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
+        .left,
+        .right {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        
+        .left {
+            text-align: center;
+            position: relative;
+            left: -150px;
+            width: 800px;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 300px;
+            position: relative;
+            width: 800px;
+            position: relative;
+            left: 20px;
+            top: 180px;
+        }
+        
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        .right h2 {
+            font-size: 22px;
+        }
+        
+        .right p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        
+        .right ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .right ul li {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        
+        .contact-info {
+            width: 400px;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            margin: 0 auto;
+            padding: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            position: relative;
+            left: 430px;
+            top: -220px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 16px;
+            position: relative;
+            top: 0px;
+            right: 20px;
+        }
+        
+        .contact-info h3 {
+            position: relative;
+            top: -20px;
+            right: -40px;
+            line-height: 1.5;
+            margin: 5px 0;
+        }
+        
+        .contact-info button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            top: 15px;
+            right: -40px;
+        }
+        
+        .feedback-form {
+            width: 750px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            position: relative;
+            left: -270px;
+            top: -100px;
+        }
+        
+        .feedback-form h3 {
+            font-size: 18px;
+            color: rgb(30, 50, 204);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feedback-form h3::before {
+            content: "💬";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .feedback-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .feedback-form input[type="text"],
+        .feedback-form textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .feedback-form textarea {
+            height: 100px;
+            resize: none;
+        }
+        
+        .feedback-form button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .feedback-form button:hover {
+            background-color: rgb(30, 50, 204);
+        }
+        
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../HTML/index.html">
+                <img src="../img/logo4.png" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/GioiThieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          SẢN PHẨM
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../HTML/Product-Loa.html">LOA</a>
+                            <a class="dropdown-item" href="../HTML/Product-PKAM.html">PHỤ KIỆN ÂM THANH</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/BLOG.html">GÓC TƯ VẤN</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          TÀI KHOẢN
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../HTML/DangKy.html">ĐĂNG KÝ</a>
+                            <a class="dropdown-item" href="../HTML/DangNhap.html">ĐĂNG NHẬP</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/Sitemap.html">SITEMAP</a>
+                    </li>
+                </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control search-bar" type="search" placeholder="Nhập từ khóa tìm kiếm..." aria-label="Search">
+                    <button class="search-button" type="submit">OK</button>
+                </form>
+                <a href="#" class="ml-3">
+                    <i class="cart-icon fas fa-shopping-cart"></i>
+                </a>
+                <div class="cart-icon">
+                    <a href="../HTML/GioHang.html"><img src="../img/Remove-bg.ai_1726631237573.png" alt="Cart Icon" width="90" height="90"></a>
+                </div>
+            </div>
+    </nav>
+
+    <div class="container">
+        <img src="../img/TecHland-Cyrus-Audio-40Years-1536x800.jpg.webp" width="1390" height="450" style="position: relative; left: -145px; top:125px">
+        <div class="left">
+            <div class="slideshow-container">
+                <img src="../img/VinylSaigon.png" alt="Loa 1" class="slide active">
+                <img src="../img/ifi-uno-1 (1).png" alt="Loa 2" class="slide">
+                <img src="../img/ifi-uno.png" alt="Loa 3" class="slide">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+
+            <h1>Trải Nghiệm Âm Thanh Đỉnh Cao</h1>
+        </div>
+        <div class="contact-info">
+            <h3>Thông tin liên hệ</h3>
+            <p><strong>Hotline:</strong> 0987 654 321</p><br>
+            <p><strong>Email:</strong> pixelstudio@gmail.com</p><br>
+            <p><strong>Website:</strong> www.pixelstudioshop.com</p>
+            <button type="submit">Kết Nối Với Chúng Tôi</button>
+        </div>
+        <div class="feedback-form">
+            <h3>Gửi phản hồi</h3>
+            <form action="submit_feedback.php" method="POST">
+                <label for="title">Tiêu đề <span class="required">*</span></label>
+                <input type="text" id="title" name="title" placeholder="Nhập tiêu đề của bạn" required>
+
+                <label for="content">Nội dung <span class="required">*</span></label>
+                <textarea id="content" name="content" placeholder="Nhập nội dung phản hồi tại đây!" required></textarea>
+
+                <button type="submit">Gửi Phản Hồi</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="../img/logo4.png" alt="Logo">
+                    <p>PIXEL STUDIO - CHUYÊN CUNG CẤP CÁC SẢN PHẨM CÔNG NGHỆ CHẤT LƯỢNG CAO.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../HTML/index.html">Trang chủ</a></li>
+                        <li><a href="../HTML/GioiThieu.html">Giới thiệu</a></li>
+                        <li><a href="../HTML/SanPham.html">Sản phẩm</a></li>
+                        <li><a href="../HTML/Contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <h5>Liên Hệ Với Chúng Tôi</h5>
+
+                    <i class="fas fa-phone-alt"></i> <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Số điện thoại: 0987 654 321</a></li>
+                    <BR>
+                    <i class="fas fa-envelope"></i> <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: pixelstudio@gmail.com</a></li>
+                    <BR>
+                    <i class="fas fa-map-marker-alt"></i><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Địa chỉ: 20/96 Tân Thắng, p.Sơn Kỳ, q.Tân Phú</a></li>
+
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <p class="mb-0">© 2024 Pixel Studio Computer. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

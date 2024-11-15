@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - Cửa hàng Âm thanh</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .register-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        .register-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .register-container img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+            height: auto;
+        }
+        
+        .register-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+        
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .register-container button:hover {
+            background-color: red;
+        }
+        
+        .register-container .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .register-container .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .register-container .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-container">
+        <img src="../img/logo4.png" alt="Cửa hàng Âm thanh">
+        <h2>Đăng Ký</h2>
+
+        <form id="registerForm">
+            <label for="registerUsername">Họ Tên</label>
+            <input type="text" id="registerUsername" placeholder="Nhập họ tên của bạn" required>
+
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" placeholder="Nhập email của bạn" required>
+
+            <label for="registerPassword">Mật Khẩu</label>
+            <input type="password" id="registerPassword" placeholder="Nhập mật khẩu" required>
+
+            <label for="registerConfirmPassword">Xác Nhận Mật Khẩu</label>
+            <input type="password" id="registerConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+
+            <button type="submit">Đăng Ký</button>
+        </form>
+
+        <div class="login-link">
+            <p>Đã có tài khoản? <a href="../HTML/DangNhap.html">Đăng nhập ngay</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Kiểm tra nếu có thông tin đăng nhập đã lưu
+        window.onload = function() {
+            const savedUsername = localStorage.getItem('username');
+            const savedEmail = localStorage.getItem('email');
+            const savedPassword = localStorage.getItem('password');
+
+            if (savedUsername && savedEmail && savedPassword) {
+                // Tự động điền thông tin nếu đã có trong localStorage
+                document.getElementById('registerUsername').value = savedUsername;
+                document.getElementById('registerEmail').value = savedEmail;
+                document.getElementById('registerPassword').value = savedPassword;
+            }
+        };
+
+        // Xử lý đăng ký
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("registerUsername").value;
+            const email = document.getElementById("registerEmail").value;
+            const password = document.getElementById("registerPassword").value;
+            const confirmPassword = document.getElementById("registerConfirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Mật khẩu không khớp! Vui lòng kiểm tra lại.");
+                return;
+            }
+
+            // Lưu thông tin vào localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            alert(`Đăng ký thành công với Họ tên: ${username}, Email: ${email}`);
+
+            // Chuyển hướng đến trang chủ sau khi đăng ký thành công
+            window.location.href = 'index.html'; // Chuyển đến trang chủ (có thể thay bằng đường dẫn trang chính của bạn)
+        });
+    </script>
+
+</body>
+
+</html>

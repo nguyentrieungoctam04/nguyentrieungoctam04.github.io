@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Viết 1</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        .wrapper {
+            width: 1380;
+            height: 1060px;
+            margin: 0 auto;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+        
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(30, 50, 204);
+        }
+        
+        header img {
+            position: absolute;
+            top: -5px;
+            left: 0px;
+        }
+        
+        .frm1 {
+            width: 400px;
+            display: flex;
+            position: relative;
+            right: -190px;
+            top: 15px;
+        }
+        
+        .frm1-input {
+            width: 20%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+        
+        .frm1-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            position: relative;
+            right: -189px;
+            top: 15px;
+        }
+        
+        .frm1-button:hover:hover {
+            background-color: darkred;
+        }
+        
+        .cart-icon {
+            font-size: 24px;
+            color: rgb(30, 50, 204);
+            position: absolute;
+            top: -10px;
+            right: 100px;
+            cursor: pointer;
+        }
+        
+        .cart-icon .cart-count {
+            position: fixed;
+            top: 10px;
+            right: -80px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 4px 8px;
+        }
+        
+        .cart-icon img {
+            cursor: pointer;
+            background-color: rgb(30, 50, 204);
+            position: absolute;
+            top: 20px;
+            right: 200px;
+        }
+        
+        .cart-icon img:hover {
+            opacity: 0.8;
+        }
+        
+        .content {
+            width: 100%;
+            height: 650px;
+            white-space: normal;
+        }
+        
+        .content h1 {
+            position: absolute;
+            left: 600px;
+            top: 580px;
+        }
+        
+        .content h2 {
+            position: absolute;
+            left: 600px;
+            top: 940px;
+        }
+        
+        .content p {
+            position: relative;
+            left: 600px;
+            top: 130px;
+            line-height: 1.5;
+            padding: 10px;
+        }
+        
+        .content span {
+            position: relative;
+            left: 80px;
+            top: 180px;
+            line-height: 15px;
+            padding: 10px;
+            line-height: 1.5;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .content img {
+            position: relative;
+            left: 20px;
+            top: -20px;
+            line-height: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding: 20px;
+            text-align: left;
+            float: left;
+            margin-right: 20px;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        ul li {
+            width: 150px;
+        }
+        
+        .navbar {
+            background-color: rgb(0, 74, 173);
+        }
+        
+        .navbar-brand img {
+            height: 100px;
+            WIDTH: 100px;
+            position: relative;
+            left: -120px;
+            top: 0px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            position: relative;
+            left: 40px;
+            top: 0px;
+        }
+        
+        .nav-link:hover {
+            color: #ddd !important;
+        }
+        
+        .search-bar {
+            width: 300px;
+            position: relative;
+            left: 110px;
+            top: 0px;
+        }
+        
+        .search-button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            position: relative;
+            left: 80px;
+            top: 0px;
+        }
+        
+        .cart-icon {
+            color: white;
+            font-size: 24px;
+            position: relative;
+            right: -130px;
+            top: 0px;
+            position: relative;
+            left: 360px;
+            top: -60px;
+        }
+        
+        .navbar-nav {
+            position: absolute;
+            left: 100px;
+        }
+        
+        .button {
+            background-color: rgb(30, 50, 204);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            POSITION: absolute;
+            top: 1150px;
+            left: 850px;
+        }
+        
+        .button:hover {
+            background-color: #31b0d5;
+        }
+        
+        .footer {
+            background-color: rgb(0, 74, 173);
+            color: white;
+            padding: 10px 0;
+            position: absolute;
+            top: 1300px;
+            left: 0px;
+            width: 100%;
+        }
+        
+        .footer img {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: -50px;
+        }
+        
+        .footer a {
+            color: white;
+            position: relative;
+            left: -15px;
+            top: 50px;
+            line-height: 1;
+            padding: 10px;
+        }
+        
+        .footer a:hover {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer p {
+            color: white;
+            position: relative;
+            left: -70px;
+        }
+        
+        .footer h5 {
+            color: white;
+            position: relative;
+            left: 100px;
+            top: 50px;
+        }
+        
+        .footer i {
+            color: white;
+            position: relative;
+            left: -70px;
+            top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../HTML/index.html">
+                    <img src="../img/logo4.png" alt="Logo">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/index.html">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/GioiThieu.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                              SẢN PHẨM
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../HTML/Product-Loa.html">LOA</a>
+                                <a class="dropdown-item" href="../HTML/Product-PKAM.html">PHỤ KIỆN ÂM THANH</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/BLOG.html">GÓC TƯ VẤN</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                              TÀI KHOẢN
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../HTML/DangKy.html">ĐĂNG KÝ</a>
+                                <a class="dropdown-item" href="../HTML/DangNhap.html">ĐĂNG NHẬP</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/Sitemap.html">SITEMAP</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control search-bar" type="search" placeholder="Nhập từ khóa tìm kiếm..." aria-label="Search">
+                        <button class="search-button" type="submit">OK</button>
+                    </form>
+                    <a href="#" class="ml-3">
+                        <i class="cart-icon fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="cart-icon">
+                        <a href="../HTML/GioHang.html"><img src="../img/Remove-bg.ai_1726631237573.png" alt="Cart Icon" width="90" height="90"></a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="content">
+            <img src="../img/1-333568b0-d4ba-429c-96e0-62d3804db340.jpg" width="1380" height="450">
+            <br>
+            <b><h1>Tai nghe không dây chống ồn Cambridge P100 hiệu năng xuất sắc</h1></b>
+            <br>
+            <p>Cambridge Audio đã tự tin ra mắt chiếc tai nghe chụp đầu tiên của mình – Melomania P100. Đây chính là
+                <BR> phiên bản chụp tai đầy ấn tượng của chiếc tai nghe không dây Melomania M100 đã được giới phê bình hết
+                <BR> lời ca ngợi. Hãy cùng Techland khám phá chi tiết về sản phẩm đột phá này trong bài viết sau đây.</p>
+            <p>Melomania P100 là sản phẩm tai chụp chống ốn, được trang bộ khuếch đại Class A/B kết hợp cùng driver
+                <BR> màng Mylar tùy chỉnh 40mm, công nghệ Qualcomm Clear Voice Calling cVc 8.0 và âm thanh độ phân giải
+                <BR> cao, cùng với pin có thể thay thế kéo dài đến 100 giờ khi sạc đầy theo công bố của hãng.</p><br>
+            <b><h2>Thiết kế</h2></b><br>
+            <img src="../img/8_Effortless20listening.jpg-1024x680.jpg" width="500" height="250">
+            <span>Cambridge Audio Melomania P100 duy trì phong cách thẩm mỹ tối giản và hấp dẫn của thương hiệu. <BR>Vật liệu bao gồm nhôm, nhựa chắc chắn và da thuần chay mềm mại. Các chi tiết như logo dập <BR> nổi trên mỗi củ tai là những điểm nhấn tinh tế. Chúng có vẻ ngoài sang trọng được tô điểm bởi hộp đựng thời trang với ngăn phụ kiện để cất giữ cáp tiện lợi. Hai dây cáp âm thanh đi kèm bên trong (3.5mm, USB-C) được bọc bằng vải dệt bền bỉ để đảm bảo sử dụng lâu dài và tương đối không bị rối.</span>
+            <span>Chất lượng chế tạo tốt đem đến sự chắc chắn từ phần khung và hoàn thiện bề mặt. Khối lượng của tai nghe 331gr nặng hơn một chút so với trung bình các sản phẩm trên thị trường đem đến cảm giác đeo hơi nặng, hoàn toàn thoải mái khi ngồi làm việc hay đi tàu xe những sẽ hơi nặng một chút nếu người dùng vừa đeo tai nghe vừa di chuyển. Tuy nhiên đây là điểm trừ khá nhỏ.</span><br><br>
+        </div>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="../img/logo4.png" alt="Logo">
+                        <p>PIXEL STUDIO - CHUYÊN CUNG CẤP CÁC SẢN PHẨM CÔNG NGHỆ CHẤT LƯỢNG CAO.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Liên kết nhanh</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../HTML/index.html">Trang chủ</a></li>
+                            <li><a href="../HTML/GioiThieu.html">Giới thiệu</a></li>
+                            <li><a href="../HTML/SanPham.html">Sản phẩm</a></li>
+                            <li><a href="../HTML/Contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
+                        <h5>Liên Hệ Với Chúng Tôi</h5>
+
+                        <i class="fas fa-phone-alt"></i> <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Số điện thoại: 0987 654 321</a></li>
+                        <BR>
+                        <i class="fas fa-envelope"></i> <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: pixelstudio@gmail.com</a></li>
+                        <BR>
+                        <i class="fas fa-map-marker-alt"></i><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Địa chỉ: 20/96 Tân Thắng, p.Sơn Kỳ, q.Tân Phú</a></li>
+
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <p class="mb-0">© 2024 Pixel Studio Computer. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    </script>
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        .wrapper {
+            width: 1380px;
+            margin: 0 auto;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        ul li {
+            width: 150px;
+        }
+        
+        .navbar {
+            background-color: rgb(0, 74, 173);
+            position: absolute;
+            top: 0px;
+            width: 100%;
+        }
+        
+        .navbar-brand img {
+            height: 100px;
+            WIDTH: 100px;
+            position: relative;
+            left: -120px;
+            top: 0px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            position: relative;
+            left: 40px;
+            top: 0px;
+        }
+        
+        .nav-link:hover {
+            color: #ddd !important;
+        }
+        
+        .search-bar {
+            width: 300px;
+            position: relative;
+            left: 100px;
+            top: 0px;
+        }
+        
+        .search-button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            position: relative;
+            left: 70px;
+            top: 0px;
+        }
+        
+        .navbar-nav {
+            position: absolute;
+            left: 100px;
+        }
+        
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        .wrapper {
+            width: 1380px;
+            height: 4540px;
+            margin: 0 auto;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+        
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(30, 50, 204);
+        }
+        
+        header img {
+            position: absolute;
+            top: -20px;
+            left: 0px;
+        }
+        
+        .slideshow {
+            width: 1350px;
+            height: 350px;
+        }
+        
+        .slideshow img {
+            width: 1350px;
+            height: 500px;
+            position: absolute;
+            top: 130px;
+            left: 35px;
+            opacity: 0;
+            animation: changeImage 20s infinite;
+        }
+        
+        .slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .slideshow img:nth-child(2) {
+            animation-delay: 15s;
+        }
+        
+        .slideshow img:nth-child(3) {
+            animation-delay: 30s;
+        }
+        
+        .slideshow img:nth-child(4) {
+            animation-delay: 45s;
+        }
+        
+        @keyframes changeImage {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .cart-icon {
+            font-size: 24px;
+            color: rgb(0, 74, 173);
+            position: relative;
+            left: 350px;
+            top: -60px;
+            cursor: pointer;
+        }
+        
+        .cart-icon .cart-count {
+            position: fixed;
+            top: 10px;
+            right: -80px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 4px 8px;
+        }
+        
+        .cart-icon img {
+            cursor: pointer;
+            background-color: rgb(0, 74, 173);
+            position: absolute;
+            top: 20px;
+            right: 200px;
+        }
+        
+        .cart-icon img:hover {
+            opacity: 0.8;
+        }
+        
+        .content {
+            width: 100%;
+            height: 4600px;
+            white-space: normal;
+        }
+        
+        .deal-section {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .deal-section h2 {
+            font-size: 2rem;
+            color: red;
+            margin-bottom: 20px;
+            position: relative;
+            top: 280px;
+        }
+        
+        .deal-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .deal-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            padding: 15px;
+            position: relative;
+            top: 280px;
+        }
+        
+        .deal-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .deal-item h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .deal-item .price {
+            font-size: 1.5rem;
+            color: red;
+        }
+        
+        .deal-item .old-price {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        
+        .deal-item .bonus {
+            font-size: 0.9rem;
+            color: green;
+        }
+        
+        .deal-item .sale {
+            color: red;
+        }
+        
+        .deal-item .discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+        
+        .banner {
+            font-size: 2rem;
+            color: red;
+            margin-bottom: 20px;
+            position: relative;
+            top: 1000px;
+        }
+        
+        .banner h3 {
+            position: absolute;
+            top: 1200px;
+            left: 500px;
+        }
+        
+        .banner img {
+            position: absolute;
+            top: 0px;
+            left: -60px;
+        }
+        
+        .menu2 {
+            width: 25%;
+            height: 750px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            line-height: 80px;
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: absolute;
+            left: 20px;
+            top: 1620px;
+            background-image: url('/img/5a03a5e2fafdb82205300a6f01c57045.jpg');
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .menu2 a {
+            display: inline-block;
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .menu2 a:hover {
+            background-color: brown;
+        }
+        
+        .menu2 h2 {
+            text-align: center;
+        }
+        
+        .menu2-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+            text-align: center;
+        }
+        
+        .menu2-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .menu2-item:last-child {
+            border: none;
+        }
+        
+        .menu2-products {
+            background-color: red;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .menu2-products:hover {
+            color: darkred;
+        }
+        
+        section {
+            width: 70%;
+            height: 790px;
+            float: left;
+            position: relative;
+            right: -400px;
+            top: 300px;
+            background-color: white;
+        }
+        
+        .loa-section {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loa-section h2 {
+            font-size: 2rem;
+            color: red;
+            margin-bottom: 20px;
+            position: relative;
+            top: 180px;
+        }
+        
+        .loa-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .loa-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            padding: 15px;
+            position: relative;
+            top: 50px;
+            text-align: center;
+        }
+        
+        .loa-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .loa-item h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .loa-item .price {
+            font-size: 1.5rem;
+            color: red;
+        }
+        
+        .loa-item .old-price {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        
+        .loa-item .bonus {
+            font-size: 0.9rem;
+            color: green;
+        }
+        
+        .loa-item .sale {
+            color: red;
+        }
+        
+        .loa-item .discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+        
+        .banner2 {
+            font-size: 2rem;
+            color: red;
+            margin-bottom: 20px;
+            position: relative;
+            top: 1500px;
+            left: -400px;
+        }
+        
+        .banner2 h3 {
+            position: absolute;
+            left: 20px;
+            top: 1600px;
+        }
+        
+        .banner2 img {
+            position: absolute;
+            top: 960px;
+            left: 60px;
+        }
+        
+        .banner3 img {
+            position: absolute;
+            top: 2450px;
+            left: 80px;
+        }
+        
+        .menu3 {
+            width: 25%;
+            height: 750px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            line-height: 80px;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: absolute;
+            left: 20px;
+            top: 2950px;
+            background-image: url('/img/5a03a5e2fafdb82205300a6f01c57045.jpg');
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .menu3 a {
+            display: inline-block;
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .menu3 a:hover {
+            background-color: brown;
+        }
+        
+        .menu3 h2 {
+            text-align: center;
+        }
+        
+        .menu3-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+            text-align: center;
+        }
+        
+        .menu3-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .menu3-item:last-child {
+            border: none;
+        }
+        
+        .menu3-products {
+            background-color: red;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .menu3-products:hover {
+            color: darkred;
+        }
+        
+        article {
+            width: 70%;
+            height: 790px;
+            float: left;
+            position: relative;
+            right: -400px;
+            top: 900px;
+            background-color: white;
+        }
+        
+        .day-article {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container H2 {
+            COLOR: RED;
+            position: relative;
+            LEFT: -150PX;
+        }
+        
+        .day-article h2 {
+            font-size: 2rem;
+            color: red;
+            margin-bottom: 20px;
+            position: relative;
+            top: 180px;
+        }
+        
+        .day-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        
+        .day-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            padding: 15px;
+            position: relative;
+            top: 50px;
+            text-align: center;
+        }
+        
+        .day-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .day-item h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .day-item .price {
+            font-size: 1.5rem;
+            color: red;
+        }
+        
+        .day-item .old-price {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        
+        .day-item .bonus {
+            font-size: 0.9rem;
+            color: green;
+        }
+        
+        .day-item .sale {
+            color: red;
+        }
+        
+        .day-item .discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+        
+        .news-container h2 {
+            font-size: 2rem;
+            color: red;
+            margin-bottom: 20px;
+            position: absolute;
+            top: -100px;
+            left: 570px;
+            font-size: xx-large;
+        }
+        
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: absolute;
+            top: 3900px;
+            left: 20px;
+        }
+        
+        .news-card {
+            width: 30%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .news-card-content {
+            padding: 15px;
+        }
+        
+        .news-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .news-card-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        
+        .news-card-description {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .news-card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        
+        .news-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn-view-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            position: absolute;
+            top: 4460px;
+            right: 650px;
+        }
+        
+        .btn-view-more:hover {
+            background-color: #0056b3;
+        }
+        
+        .footer {
+            background-color: rgb(0, 74, 173);
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .footer img {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: -50px;
+        }
+        
+        .footer a {
+            color: white;
+            position: relative;
+            left: -15px;
+            top: 50px;
+            line-height: 1;
+            padding: 10px;
+        }
+        
+        .footer a:hover {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer p {
+            color: white;
+            position: relative;
+            left: -70px;
+        }
+        
+        .footer h5 {
+            color: white;
+            position: relative;
+            left: 100px;
+            top: 50px;
+        }
+        
+        .footer i {
+            color: white;
+            position: relative;
+            left: -70px;
+            top: 70px;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            top: 420px;
+            left: 180px;
+            width: 180px;
+        }
+        
+        .product-card img {
+            max-width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .product-card h5 {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        
+        .product-card h3 {
+            margin-top: 10px;
+            font-size: 16px;
+            position: relative;
+            top: 750px;
+            left: 0px;
+        }
+        
+        .product-card p {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .product-card button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .product-card button:hover {
+            background-color: #3F51FF;
+        }
+        
+        .category {
+            margin-bottom: 20px;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: 450px;
+            margin: 30px 0;
+            position: relative;
+            top: 500px;
+            left: 0px;
+            width: 950px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../HTML/index.html">
+                <img src="../img/logo4.png" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/GioiThieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          SẢN PHẨM
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../HTML/Product-Loa.html">LOA</a>
+                            <a class="dropdown-item" href="../HTML/Product-PKAM.html">PHỤ KIỆN ÂM THANH</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/BLOG.html">GÓC TƯ VẤN</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          TÀI KHOẢN
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../HTML/DangKy.html">ĐĂNG KÝ</a>
+                            <a class="dropdown-item" href="../HTML/DangNhap.html">ĐĂNG NHẬP</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/Sitemap.html">SITEMAP</a>
+                    </li>
+                </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control search-bar" type="search" placeholder="Nhập từ khóa tìm kiếm..." aria-label="Search">
+                    <button class="search-button" type="submit">OK</button>
+                </form>
+                <a href="#" class="ml-3">
+                    <i class="cart-icon fas fa-shopping-cart"></i>
+                </a>
+                <div class="cart-icon">
+                    <a href="../HTML/GioHang.html"><img src="../img/Remove-bg.ai_1726631237573.png" alt="Cart Icon" width="90" height="90"></a>
+                </div>
+            </div>
+    </nav>
+    <div class="content">
+        <div class="slideshow"> <img src="../img/chuyen-ban-phu-kien-loa-array-gia-re-du-cac-loai-1.jpg" alt="Image 1">
+            <img src="../img/2022_8_9_637956509561414787_loa-kiem-am-la-gi-2.jpg" alt="Image 2">
+            <img src="../img/phu-kien-loa-array-9-min-1.jpg" alt="Image 3">
+            <img src="../img/lua-chon-amplifer-bo-khuech-dai.jpg" alt="Image 4">
+        </div>
+        <div class="deal-section">
+            <h2>DEAL NGON MỖI NGÀY</h2>
+            <div class="deal-container">
+                <div class="deal-item">
+                    <a href="../HTML/LoaBluetoothJBLPARTYBOX710(MicJBL).html"> <img src="../img/loa-bose-soundlink-max-anhduyenaudio-hinh-2.jpg" alt="Loa Bluetooth"></a>
+                    <h3>Loa Bluetooth Di Động Mini Chống Nước</h3>
+                    <p class="price">2.990.000₫</p>
+                </div>
+                <div class="deal-item">
+                    <a href="../HTML/Beolab-28(Gray).html"> <img src="../img/dan-am-thanh-khong-day-q-coustics-m40-walnut-1.jpg" alt="Dàn Âm Thanh"></a>
+                    <h3>Dàn âm thanh không dây Q Acoustics M40</h3>
+                    <p class="price">25.800.000₫</p>
+                    <p class="bonus">Tặng loa karaoke trị giá 5.600.000₫</p>
+                </div>
+                <div class="deal-item">
+                    <a href="../HTML/LoaBluetoothKlipschAustin.html"><img src="../img/loa-bluetooth-cao-cap-klipsch-the-three-300x300.jpg" alt="Loa Bluetooth Không Dây"></a>
+                    <h3>Loa Bluetooth Không Dây Klipsch The Three</h3>
+                    <p class="price sale">6.490.000₫<br> <span class="old-price">10.400.000₫</span></p>
+                    <span class="discount">-20%</span>
+                </div>
+                <BR>
+                <div class="deal-item">
+                    <a href="../HTML/B&OBeolab50.html"><img src="../img/dan-am-thanh-khong-day-q-coustics-m20hd-white-2-600x600.jpg" alt="Dàn âm thanh"></a>
+                    <h3>Dàn âm thanh không dây Q Acoustics M2</h3>
+                    <p class="price sale">11.490.000₫ <span class="old-price">16.290.000₫</span></p>
+                    <span class="discount">-20%</span>
+                </div>
+                <div class="deal-item">
+                    <a href="../HTML/LoaTivi(Soundbar)DEVIALETDione.html"> <img src="../img/loa-tivi-sennheiser-ambeo-soundbar-mini.jpg" alt="Loa Tivi"></a>
+                    <h3>Loa Tivi Sennheiser Ambeo Soundbar Mini</h3>
+                    <p class="price">25.990.000₫</p>
+                </div>
+                <div class="deal-item">
+                    <a href="../HTML/AudiovectorR11Arreté.HTML"> <img src="../img/loa-jamo-c95-amply-denon-pma-800ne.jpg" alt="Dàn Âm Thanh Nghe Nhạc"></a>
+                    <h3>Dàn Âm Thanh Nghe Nhạc Không Dây</h3>
+                    <p class="price sale">36.000.000₫ <span class="old-price">45.000.000₫</span></p>
+                    <span class="discount">-20%</span>
+                </div>
+                <div class="deal-item">
+                    <a href="../HTML/FennessyGramophoneF1877-69L.html"> <img src="../img/tai-nghe-chong-on-bose-headphones-700-trang.jpg" alt="Dàn Âm Thanh Nghe Nhạc"></a>
+                    <h3>Tai Nghe Chống Ồn Bose Noise Cancelling </h3>
+                    <p class="price sale">8.490.000₫ <br><span class="old-price">10.990.000₫</span></p>
+                    <span class="discount">-23%</span>
+                </div>
+                <div class="deal-item">
+                    <a href="../HTML/DayTinHieuSubQEDConnectSubwoofer.html"> <img src="../img/tai-nghe-khong-day-bose-sport-earbuds-mau-trang.jpg" alt="Dàn Âm Thanh Nghe Nhạc"></a>
+                    <h3>Tai Nghe Không Dây Bose Sport Earbuds</h3>
+                    <p class="price sale">3.992.000₫ <br><span class="old-price">6.800.000₫</span></p>
+                    <span class="discount">-40%</span>
+                </div>
+                <div class="banner">
+                </div>
+            </div>
+        </div>
+        <aside>
+            <ul class="menu2">
+                <a href="../HTML/Product-Loa.html">&nbsp;&nbsp;LOA CÂY (FLOOR STANDING)</a>
+                <a href="../HTML/Product-Loa.html">&nbsp;&nbsp;LOA BOOKSHELF</a><br>
+                <a href="../HTML/Product-Loa.html">&nbsp;&nbsp;LOA TÍCH HỢP AMPLI</a><br>
+                <a href="../HTML/Product-Loa.html">&nbsp;&nbsp;LOA BLUETOOTH</a><br>
+                <a href="../HTML/Product-Loa.html">&nbsp;&nbsp;LOA SOUNDBAR</a>
+            </ul>
+        </aside>
+
+        <div class="banner2">
+        </div>
+        <aside2>
+            <ul class="menu3">
+                <a href="../HTML/Product-PKAM.html">&nbsp;&nbsp;DÂY LOA</a><br>
+                <a href="../HTML/Product-PKAM.html">&nbsp;&nbsp;DÂY SUB</a><br>
+                <a href="../HTML/Product-PKAM.html">&nbsp;&nbsp;DÂY USB</a><br>
+                <a href="../HTML/Product-PKAM.html">&nbsp;&nbsp;GIÁ TREO LOA</a><br>
+            </ul>
+        </aside2>
+
+
+        <div class="container mt-5">
+            <h2 class="text-center mb-4"></h2>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="category">
+
+                        <div class="row g-1">
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/loa-bookshelf-audiovector-r-1-arrete-italian-red-piano-special-edition-3.jpg" alt="Product 1">
+                                    <h5>Loa Bookshelf Audiovector R 1 Signature italian Red Piano Special Edition</h5>
+                                    <p>80.195.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/images.jpg" alt="Product 2"><br>
+                                    <h5>Loa bookshelf Q Acoustics 5020</h5>
+                                    <p>19.800.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/day-usb-audio-quest-carbon-usb-2-0-3m.jpg" alt="Product 3"><br>
+                                    <h5>Loa cây Q Acoustics 5040</h5>
+                                    <p>32.800.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/loa-bookshelf-audiovector-qr-3-3.jpg" alt="Product 4">
+                                    <h5>Loa cây (Floor Standing) Audiovector QR 3</h5>
+                                    <p>45.825.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/loa-goldmund-pulp-2.jpg" alt="Product 5">
+                                    <h5>Dàn Âm Thanh Không Dây Goldmund Pulp</h5>
+                                    <p>450.000.000₫</p>
+                                    <button>Mua ngay</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/images (1).jpg" alt="Product 6">
+                                    <h5>Loa Cây (Floorstanding) Q Acoustics Concept 50</h5>
+                                    <p>62.990.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="image-container">
+                        <img src="../img/tim-hieu-cac-cong-nghe-co-tren-loa-jbl-1-800x450.jpg" alt="Hình ảnh giữa hai danh mục">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="category">
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <div class="row g-1">
+
+                            <div class="col-md-4">
+                                <div class="product-card">
+
+                                    <img src="../img/day-loa-qed-ruby-anniversary-evolution-324x324.jpg" alt="Product 1">
+                                    <h5>Dây Loa Audiovector ZERO Compression Avantgarde Arreté</h5>
+                                    <p>62.990.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/techland-day-loa-triangle-lecable-sys50a-1.jpg" alt="Product 2"><br>
+                                    <h5>Dây Loa Triangle LeCable SYS50A</h5>
+                                    <p>6.590.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/day-usb-audio-quest-carbon-usb-2-0-3m.jpg" alt="Product 3"><br>
+                                    <h5>Dây USB Audio Quest Carbon USB 2.0-3m</h5>
+                                    <p>3.339.000₫</p>
+                                    <button>Mua ngay</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/gia-treo-tuong-loa-Q-Acoustics.jpg" alt="Product 4">
+                                    <h5>Giá Treo Tường Loa Q Acoustics 2000WB</h5>
+                                    <p>1.600.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/kim-dia-than-goldring-elite.jpg" alt="Product 5">
+                                    <h5>Kim Đĩa Than MC Goldring Elite</h5>
+                                    <p>17.290.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <img src="../img/techlandaudio-phono-box.jpg" alt="Product 6">
+                                    <h5>Bộ Phono Box Sugden Audio A21SE Stage</h5>
+                                    <p>21.590.000₫</p>
+                                    <a href="../HTML/GioHang.html"><button>Mua ngay</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="news-container">
+            <h2>TIN TỨC MỚI</h2>
+            <div class="news-card">
+                <img src="../img/3_Superior20Amplification.jpg-1536x1020.webp" alt="News 1 Image" width="120" height="100">
+                <div class="news-card-content">
+                    <div class="news-card-title">Tai nghe không dây chống ồn Cambridge P100 hiệu năng xuất sắc</div>
+                    <div class="news-card-date">18-09-2023</div>
+                    <div class="news-card-description">Cambridge Audio đã tự tin ra mắt chiếc tai nghe chụp đầu tiên của mình – Melomania P100...</div>
+                    <a href="../HTML/Prduct1.html">Xem thêm </a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="../img/Bluesound.jpg.webp" alt="News 2 Image"><br>
+                <div class="news-card-content">
+                    <div class="news-card-title">Bluesound ra mắt dòng sản phẩm mới Node Nano, Node và Node Icon</div>
+                    <div class="news-card-date">17-09-2023</div>
+                    <div class="news-card-description">Bluesound cập nhật dòng sản phẩm của mình với bộ ba thiết bị phát nhạc trực tuyến mới: một thế hệ mới của Node (thay thế cho Node 2021),Node Nano cho người mới bắt đầu và Node Icon cao cấp...</div>
+                    <a href="../HTML/Product2.html">Xem thêm </a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="../img/NAD_C700_Lifestyle1-1536x864.jpg.webp" alt="News 3 Image">
+                <div class="news-card-content">
+                    <div class="news-card-title">NAD Electronics ra mắt bộ khuếch đại phát nhạc trực tuyến BluOS C 700 V2</div>
+                    <div class="news-card-date">16-09-2023</div>
+                    <div class="news-card-description">Thế hệ mới nhất của C 700 – giải pháp nhỏ gọn, tiết kiệm và tối giản được nâng cấp với bộ giải mã DAC ESS Sabre, đầu vào phono MM, khả năng tương thích Dirac Live và giải mã Dolby Digital...</div>
+                    <a href="../HTML/Product3.html">Xem thêm </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <BR>
+    <BR>
+    <BR>
+
+    <a href="../HTML/BLOG.html" class="btn-view-more">Xem thêm</a>
+
+    </div>
+
+    <a href="../HTML/BLOG.html" class="btn-view-more">Xem thêm</a>
+
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="../img/logo4.png" alt="Logo">
+                    <p>PIXEL STUDIO - CHUYÊN CUNG CẤP CÁC SẢN PHẨM CÔNG NGHỆ CHẤT LƯỢNG CAO.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../HTML/Home.html">Trang chủ</a></li>
+                        <li><a href="../HTML/GioiThieu.html">Giới thiệu</a></li>
+                        <li><a href="../HTML/SanPham.html">Sản phẩm</a></li>
+                        <li><a href="../HTML/liên hệ.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <h5>Liên Hệ Với Chúng Tôi</h5>
+
+                    <i class="fas fa-phone-alt"></i> <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Số điện thoại: 0987 654 321</a></li>
+                    <BR>
+                    <i class="fas fa-envelope"></i> <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: pixelstudio@gmail.com</a></li>
+                    <BR>
+                    <i class="fas fa-map-marker-alt"></i><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Địa chỉ: 20/96 Tân Thắng, p.Sơn Kỳ, q.Tân Phú</a></li>
+
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <p class="mb-0">© 2024 Pixel Studio Computer. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

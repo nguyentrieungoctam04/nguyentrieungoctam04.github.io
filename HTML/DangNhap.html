@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Cửa hàng Âm thanh</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .login-container img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+            height: auto;
+        }
+        
+        .login-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+        
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .login-container button:hover {
+            background-color: red;
+        }
+        
+        .login-container .register-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .login-container .register-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .login-container .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <img src="../img/logo4.png" alt="Cửa hàng Âm thanh">
+        <h2>Đăng Nhập</h2>
+
+        <form id="loginForm">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="Nhập email của bạn" required>
+
+            <label for="loginPassword">Mật khẩu</label>
+            <input type="password" id="loginPassword" placeholder="Nhập mật khẩu" required>
+
+            <button type="submit">Đăng Nhập</button>
+        </form>
+
+        <div class="register-link">
+            <p>Bạn chưa có tài khoản? <a href="../HTML/DangKy.html">Đăng ký ngay</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Xử lý đăng nhập
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Lấy thông tin đăng nhập từ form
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            // Lấy thông tin từ localStorage
+            const storedEmail = localStorage.getItem('email');
+            const storedPassword = localStorage.getItem('password');
+
+            // Kiểm tra xem thông tin người dùng nhập vào có khớp với thông tin đã lưu trong localStorage hay không
+            if (email === storedEmail && password === storedPassword) {
+                alert(`Đăng nhập thành công với Email: ${email}`);
+
+                // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
+                window.location.href = 'index.html'; // Thay đổi đường dẫn này theo trang chủ của bạn
+            } else {
+                alert('Email hoặc mật khẩu không chính xác. Vui lòng thử lại.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
